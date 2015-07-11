@@ -11,12 +11,21 @@
         var $body = $('body');
         $body.html('');
 
+        var formatTimestamp = function(date) {
+          var day = String(date.getDate());
+          var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+          var month = monthArray[date.getMonth()];
+          var year = String(date.getFullYear());
+          var formattedDate = day + ' ' + month + ' ' + year;
+          return formattedDate;
+        };
+
         var index = 0;
         var displayTweets = function() {
           while(index < streams.home.length){
             var tweet = streams.home[index];
             var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
+            $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + formatTimestamp(tweet.created_at));
             $tweet.prependTo($body);
             index += 1;
           }
