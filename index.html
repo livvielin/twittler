@@ -33,7 +33,11 @@
             dayOrNight = 'PM';
           }
           hours = String(hours);
-          var minutes = String(date.getMinutes());
+          var minutes = date.getMinutes();
+          if (minutes < 10) {
+            minutes = '0' + String(minutes);
+          }
+          minutes = String(minutes);
           var formattedTime = hours + ':' + minutes + ' ' + dayOrNight;
 
           return 'at ' + formattedTime + ' on ' + formattedDate;
