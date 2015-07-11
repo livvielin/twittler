@@ -9,6 +9,10 @@ body {
 	letter-spacing: .5px;
 }
 
+a {
+	text-decoration: none;
+}
+
 .refresh {
 	text-align: center;
 	border: 1px solid lightblue;
