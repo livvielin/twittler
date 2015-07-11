@@ -56,7 +56,7 @@
 
         var index = 0;
         var displayTweets = function() {
-          while(index < streams.home.length){
+          while (index < streams.home.length) {
             var tweet = streams.home[index];
             var user = '<div class="username">@' + tweet.user + '</div>';
             var $tweet = $('<div class="row">' + user + ' ' + formatTimestamp(tweet.created_at) + '<br/>' + tweet.message + '</div>');
@@ -72,6 +72,15 @@
         $('.tweets').on('click', '.username', function() {
           $('.row').hide();
           $('.return').show();
+          var username = $(this).closest('.username').text().slice(1);
+          var index = streams.users[username].length - 1;
+          while (index >= 0) {
+            var tweet = streams.users[username][index];
+            var user = '<div class="username">@' + tweet.user + '</div>';
+            var $tweet = $('<div class="row">' + user + ' ' + formatTimestamp(tweet.created_at) + '<br/>' + tweet.message + '</div>');
+            $tweet.appendTo($('.tweets'));
+            index -= 1;
+          }
         });
 
       });
