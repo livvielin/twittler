@@ -13,17 +13,6 @@ a {
 	text-decoration: none;
 }
 
-.refresh {
-	text-align: center;
-	border: 1px solid lightblue;
-	border-radius: 5px;
-}
-
-.refresh:hover {
-	font-weight: bold;
-	cursor: pointer;
-}
-
 .row {
 	background-color: white;
 	padding: 9px 12px;
@@ -44,6 +33,21 @@ a {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin-bottom: 5%;
+}
+
+.refresh, .return {
+	text-align: center;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+}
+
+.refresh:hover, .return:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.return {
+	display: none;
 }
 
 .username {

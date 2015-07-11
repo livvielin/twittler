@@ -12,6 +12,7 @@
     </a>
 
     <div class="refresh row">Refresh Tweets</div>
+    <div class="return row">Return to Main Twittler Feed</div>
 
     <section class="tweets">
     </section>
@@ -67,7 +68,8 @@
         $('.refresh').on('click', displayTweets);
 
         $('.tweets').on('click', '.username', function() {
-          alert('Hello!');
+          $('.row').hide();
+          $('.return').show();
         });
 
       });
