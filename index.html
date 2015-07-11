@@ -48,8 +48,7 @@
         var displayTweets = function() {
           while(index < streams.home.length){
             var tweet = streams.home[index];
-            var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + formatTimestamp(tweet.created_at));
+            var $tweet = $('<div>@' + tweet.user + ' ' + formatTimestamp(tweet.created_at) + '<br/>' + tweet.message + '</div>');
             $tweet.prependTo($('.tweets'));
             index += 1;
           }
