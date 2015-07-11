@@ -11,14 +11,20 @@
         var $body = $('body');
         $body.html('');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        var index = 0;
+        var displayTweets = function() {
+          while(index < streams.home.length){
+            var tweet = streams.home[index];
+            var $tweet = $('<div></div>');
+            $tweet.text('@' + tweet.user + ': ' + tweet.message);
+            $tweet.prependTo($body);
+            index += 1;
+          }
+        };
+
+        displayTweets();
+
+        setInterval(displayTweets, 5000);
 
       });
 
