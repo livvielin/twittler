@@ -45,3 +45,9 @@ body {
 .username {
 	display: inline;
 }
+
+.username:hover {
+	font-weight: bold;
+	color: #9CF;
+	cursor: pointer;
+}
