@@ -20,7 +20,7 @@ body {
 	cursor: pointer;
 }
 
-div {
+.row {
 	background-color: white;
 	padding: 9px 12px;
 	border: 1px solid lightblue;
@@ -30,14 +30,18 @@ div {
 	margin-right: 5%;
 }
 
-div:first-child {
+.row:first-child {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
-div:last-child {
+.row:last-child {
 	border-bottom: 1px solid lightblue;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin-bottom: 5%;
+}
+
+.username {
+	display: inline;
 }
