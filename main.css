@@ -8,8 +8,18 @@ div {
 	padding: 9px 12px;
 	border: 1px solid lightblue;
 	border-bottom: 0px;
+	float: right;
+	width: 60%;
+	margin-right: 5%;
+}
+
+div:first-child {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 div:last-child {
 	border-bottom: 1px solid lightblue;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
