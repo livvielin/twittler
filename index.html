@@ -12,12 +12,30 @@
         $body.html('');
 
         var formatTimestamp = function(date) {
+
           var day = String(date.getDate());
           var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
           var month = monthArray[date.getMonth()];
           var year = String(date.getFullYear());
           var formattedDate = day + ' ' + month + ' ' + year;
-          return formattedDate;
+
+          var hours = date.getHours();
+          var dayOrNight = 'AM';
+          if (hours === 0) {
+            hours = 12;
+          }
+          else if (hours > 12) {
+            hours -= 12;
+            dayOrNight = 'PM';
+          }
+          else if (hours === 12) {
+            dayOrNight = 'PM';
+          }
+          hours = String(hours);
+          var minutes = String(date.getMinutes());
+          var formattedTime = hours + ':' + minutes + ' ' + dayOrNight;
+
+          return 'at ' + formattedTime + ' on ' + formattedDate;
         };
 
         var index = 0;
