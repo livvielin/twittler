@@ -3,6 +3,12 @@ body {
 	font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.logo {
+	padding: 10px;
+	color: #9CF;
+	letter-spacing: .5px;
+}
+
 div {
 	background-color: white;
 	padding: 9px 12px;
