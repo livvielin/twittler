@@ -4,5 +4,12 @@ body {
 }
 
 div {
-	background-color: lightblue;
+	background-color: white;
+	padding: 9px 12px;
+	border: 1px solid lightblue;
+	border-bottom: 0px;
+}
+
+div:last-child {
+	border-bottom: 1px solid lightblue;
 }
