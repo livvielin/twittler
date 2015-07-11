@@ -13,7 +13,7 @@
 
     <div class="refresh row">Refresh Tweets</div>
     <a href="index.html">
-      <div class="return row">Return to Main Twittler Feed</div>
+      <div class="return row-2">Return to Main Twittler Feed</div>
     </a>
 
     <section class="tweets">
@@ -70,7 +70,7 @@
         $('.refresh').on('click', displayTweets);
 
         $('.tweets').on('click', '.username', function() {
-          $('.row').hide();
+          $('.row').remove();
           $('.return').show();
           var username = $(this).closest('.username').text().slice(1);
           var index = streams.users[username].length - 1;
