@@ -8,7 +8,12 @@
   </head>
   <body>
     <h1 class="logo">Twittler</h1>
-    <section class="tweets"></section>
+
+    <div class="refresh">Refresh Tweets</div>
+
+    <section class="tweets">
+    </section>
+
     <script>
 
       $(document).ready(function(){
@@ -56,7 +61,7 @@
 
         displayTweets();
 
-        setInterval(displayTweets, 5000);
+        $('.refresh').on('click', displayTweets);
 
       });
 

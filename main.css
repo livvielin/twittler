@@ -9,6 +9,17 @@ body {
 	letter-spacing: .5px;
 }
 
+.refresh {
+	text-align: center;
+	border: 1px solid lightblue;
+	border-radius: 5px;
+}
+
+.refresh:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
 div {
 	background-color: white;
 	padding: 9px 12px;
